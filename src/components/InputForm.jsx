@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export default function InputForm({ setSearchedToParams }) {
   const [name, setName] = useState('');
@@ -22,31 +23,6 @@ export default function InputForm({ setSearchedToParams }) {
     </form>
   );
 }
-// const Form = ({ setSearchParams }) => {
-//   const [query, setQuery] = useState('');
-
-//   const handleSubmit = e => {
-//     e.preventDefault();
-
-//     setSearchParams({ query });
-//   };
-
-//   const handleSearchParams = ({ target: { value } }) => {
-//     setQuery(value);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <InputSearch
-//         type="text"
-//         placeholder="Name movie"
-//         autoFocus
-//         value={query}
-//         onChange={handleSearchParams}
-//       />
-//       <ButtonSearch type="submit" disabled={!query}>
-//         Search
-//       </ButtonSearch>
-//     </form>
-//   );
-// };
+InputForm.propTypes = {
+  setSearchedToParams: PropTypes.func,
+};
