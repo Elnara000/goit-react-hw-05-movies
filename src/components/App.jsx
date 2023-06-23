@@ -20,7 +20,7 @@ export default function App() {
             <Route path="reviews" element={<Reviews />} />
             <Route />
           </Route>
-          <Route path="*" element={<div>not found asshole</div>} />
+          <Route path="*" element={<Home />} />
         </Route>
       </Routes>
     </Suspense>
